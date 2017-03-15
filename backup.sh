@@ -9,3 +9,4 @@ cp -puv ~/.tmux.conf ./
 cp -pruv ~/.dir_colors     ./
 cp -pruv ~/.atom/packages  ./.atom
 cp -pruv ~/.vim/           ./
+
