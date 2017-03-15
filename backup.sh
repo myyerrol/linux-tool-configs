@@ -8,4 +8,4 @@ cp -puv ~/.tmux.conf ./
 # Copy directories to backup
 cp -pruv ~/.dir_colors     ./
 cp -pruv ~/.atom/packages  ./.atom
-
+cp -pruv ~/.vim/           ./

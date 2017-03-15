@@ -26,7 +26,9 @@ fi
 
 if [ ! -d fonts ]; then
     echo "Installing the fonts of powerline ..."
-    git clone https://github.com/powerline/fonts.git
+    wget https://github.com/powerline/fonts/archive/master.zip
+    unzip -n master.zip
+    mv fonts-master fonts 
     cd fonts
     ./install.sh
 else
@@ -43,4 +45,5 @@ cd ${DIRECTORY}
 # Copy directories to user's home
 #cp -pruv ./.dir_colors    ~/
 #cp -pruv ./.atom/packages ~/.atom
+#cp -pruv ./vim            ~/.vim
 
