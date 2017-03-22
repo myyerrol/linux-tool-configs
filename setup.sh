@@ -19,7 +19,7 @@ fi
 if [ ! -d ~/.oh-my-zsh ]; then
     echo "Installing the oh-my-zsh ..." 
     sudo apt-get install zsh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 else
     echo "Finish the installation of oh-my-zsh!"
 fi
@@ -40,10 +40,10 @@ cd ${DIRECTORY}
 # Copy configurations to user's home
 #cp -puv .bashrc    ~/
 #cp -puv .zshrc     ~/
-#cp -puv .tmux.conf ~/
+cp -puv .tmux.conf ~/
 
 # Copy directories to user's home
-#cp -pruv ./.dir_colors    ~/
+cp -pruv ./.dir_colors    ~/
 #cp -pruv ./.atom/packages ~/.atom
-#cp -pruv ./vim            ~/.vim
+cp -pruv ./.vim           ~/.vim
 
