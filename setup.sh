@@ -76,7 +76,6 @@ cp -puv .vimrc     ~/
 cp -puv .tmux.conf ~/
 
 # Copy directories to user's home
-cp -pruv ./.vim/           ~/
 cp -pruv ./.dir_colors/    ~/
 cp -pruv ./.atom/packages/ ~/.atom
 
