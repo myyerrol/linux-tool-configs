@@ -47,7 +47,6 @@ if [ ! -d ~/.atom ]; then
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get update
     sudo apt-get install atom
-    cp -pruv ./.atom/packages ~/.atom
 else
     echo "Finish the installation of atom!"
 fi
@@ -56,18 +55,28 @@ fi
 if [ ! -f ~/.tmux.conf ]; then
     echo "Installing the tmux ..."
     sudo apt-get install tmux
-    cp -puv .tmux.conf ~/
 else
     echo "Finish the installation of tmux!"
+fi
+
+# Set vim
+if [! -f ~/.vimrc ]; then
+    echo "Installing the vim ..."
+    sudo apt-get install vim
+else
+    echo "Finish the installation of vim!"
 fi
 
 cd ${DIRECTORY}
 
 # Copy configurations to user's home
-#cp -puv .bashrc    ~/
-#cp -puv .zshrc     ~/
+cp -puv .zshrc     ~/
+cp -puv .bashrc    ~/
+cp -puv .vimrc     ~/
+cp -puv .tmux.conf ~/
 
 # Copy directories to user's home
-cp -pruv ./.dir_colors    ~/
-cp -pruv ./.vim           ~/.vim
+cp -pruv ./.vim/           ~/
+cp -pruv ./.dir_colors/    ~/
+cp -pruv ./.atom/packages/ ~/.atom
 
