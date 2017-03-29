@@ -60,11 +60,18 @@ else
 fi
 
 # Set vim
-if [! -f ~/.vimrc ]; then
+if [ ! -f ~/.vimrc ]; then
     echo "Installing the vim ..."
     sudo apt-get install vim
 else
     echo "Finish the installation of vim!"
+fi
+
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    echo "Installing the vundle ..."
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+else
+    echo "Finish the installation of vundle!"
 fi
 
 cd ${DIRECTORY}
