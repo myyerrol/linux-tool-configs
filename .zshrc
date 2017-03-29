@@ -90,3 +90,4 @@ eval `dircolors ~/.dir_colors/dircolors.256dark`
 
 # Set 256 colors
 export TERM=xterm-256color
+
