@@ -7,7 +7,7 @@ DIRECTORY=$(pwd)
 cd ~/Documents
 
 # Use colors
-if command -v tput >/dev/null 2>&1; then
+if command -v tput > /dev/null 2>&1; then
     ncolors=$(tput colors)
 fi
 
