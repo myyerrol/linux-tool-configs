@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 TERMINAL_COLOR="gnome-terminal-colors-solarized"
 
 DIRECTORY=$(pwd)
@@ -49,7 +51,7 @@ if [ ! -d ${TERMINAL_COLOR} ]; then
     git clone https://github.com/Anthony25/${TERMINAL_COLOR}.git
     cd ${TERMINAL_COLOR}
     ./install.sh
-    cp -pruv ./.dir_colors/ ~/
+    cp -pruv ./dir_colors/ ~/
     cd ../
     echo "${GREEN}Finish the installation of terminal's colors!${NORMAL}"
 else
@@ -68,7 +70,7 @@ else
     echo "${GREEN}Finish the installation of atom!${NORMAL}"
 fi
 
-cp -pruv ${DIRECTORY}/.atom/packages/ ~/.atom
+cp -pruv ${DIRECTORY}/atom/packages/ ~/.atom
 
 # Set tmux
 if command -v tmux > /dev/null 2>&1; then
@@ -80,7 +82,7 @@ else
     echo "${GREEN}Finish the installation of tmux!${NORMAL}"
 fi
 
-cp -puv ${DIRECTORY}/.tmux.conf ~/
+cp -puv ${DIRECTORY}/tmux/.tmux.conf ~/
 
 # Set vim
 if command -v vim > /dev/null 2>&1; then
@@ -100,7 +102,7 @@ else
     echo "${GREEN}Finish the installation of vundle!${NORMAL}"
 fi
 
-cp -puv ${DIRECTORY}/.vimrc ~/
+cp -puv ${DIRECTORY}/vim/.vimrc ~/
 
 # Set zsh and oh-my-zsh
 if command -v zsh > /dev/null 2>&1; then
@@ -120,4 +122,4 @@ else
     echo "${GREEN}Finish the installation of oh-my-zsh!${NORMAL}"
 fi
 
-cp -puv ${DIRECTORY}/.zshrc ~/
+cp -puv ${DIRECTORY}/zsh/.zshrc ~/
