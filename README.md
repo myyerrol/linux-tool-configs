@@ -25,7 +25,7 @@ This repository contains some software configurations that are used commonly und
 - **Because the installation of ZSH will cause the current script to exit, you can copy the `.zshrc` file to `HOME` manually:**
 
   ```bash
-  $> cp -puv .zshrc ~/
+  $> cp -puv ./zsh/.zshrc ~/
   ```
 
   or execute `setup.sh` once again:
