@@ -84,7 +84,8 @@ else
     echo "${GREEN}Installing the atom successfully!${NORMAL}"
 fi
 
-cp -pruv ${DIRECTORY}/atom/packages/ ~/.atom
+cp -pruv ${DIRECTORY}/atom/packages/   ~/.atom
+cp -puv  ${DIRECTORY}/atom/styles.less ~/.atom
 
 # Set tmux
 if command -v tmux > /dev/null 2>&1; then
