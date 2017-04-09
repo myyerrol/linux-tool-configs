@@ -90,3 +90,7 @@ eval `dircolors ~/.dir_colors/dircolors.256dark`
 
 # Set 256 colors
 export TERM=xterm-256color
+
+# Set scitools understand
+export PATH=/home/myyerrol/Softwares/scitools/bin/linux64:${PATH}
+STIHOME=/home/myyerrol/Softwares/scitools
