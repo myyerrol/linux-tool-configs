@@ -94,3 +94,8 @@ export TERM=xterm-256color
 # Set scitools understand
 export PATH=/home/myyerrol/Softwares/scitools/bin/linux64:${PATH}
 STIHOME=/home/myyerrol/Softwares/scitools
+
+# Set nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
