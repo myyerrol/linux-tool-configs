@@ -6,7 +6,7 @@ set -e
 # Display some informations
 echo "Author: myyerrol"
 echo "Date: 2017-01-13"
-echo "Desc: This repository contains some software configurations that are used commonly under Linux, such as vim, tmux, zsh, bash, atom, etc."
+echo "Desc: This repository contains some software configurations that are used commonly under Linux, such as vim, tmux, zsh, bash, atom, xterm, etc."
 echo ""
 
 DIRECTORY=$(pwd)
@@ -71,6 +71,28 @@ if [ ! -d ${TERMINAL_COLOR} ]; then
 else
     echo "${GREEN}The terminal's colors have been set successfully!${NORMAL}"
 fi
+
+# Set xterm and font
+if command -v xterm > /dev/null 2>&1; then
+    echo "${GREEN}Xterm has been installed successfully!${NORMAL}"
+else
+    echo "${YELLOW}Xterm has not been installed!${NORMAL}"
+    echo "${BLUE}Installing the xterm...${NORMAL}"
+    sudo apt-get install xterm
+    echo "${GREEN}Installing the xterm successfully!${NORMAL}"
+fi
+
+if [ -f /usr/share/fonts/truetype/wqy/wqy-microhei.ttc ]; then
+    echo "${GREEN}The wqy-microhei font has been installed successfully!${NORMAL}"
+else
+    echo "${YELLOW}The wqy-microhei font has not been installed!${NORMAL}"
+    echo "${BLUE}install the wqy-microhei font...${NORMAL}"
+    sudo apt-get install ttf-wqy-microhei
+    echo "${GREEN}Installing the wqy-microhei font successfully!${NORMAL}"
+fi
+
+cp -puv ${DIRECTORY}/xterm/.Xresources ~/
+xrdb -load ~/.Xresources
 
 # Set atom
 if command -v atom > /dev/null 2>&1; then
