@@ -10,12 +10,13 @@ echo "Desc: This repository contains some software configurations that are used 
 echo ""
 
 # Copy configurations to back up
-cp -puv ~/.zshrc            ./zsh
-cp -puv ~/.bashrc           ./bash
-cp -puv ~/.vimrc            ./vim
-cp -puv ~/.tmux.conf        ./tmux
-cp -puv ~/.atom/styles.less ./atom
-cp -puv ~/.Xresources       ./xterm
+cp -puv ~/.zshrc             ./zsh
+cp -puv ~/.bashrc            ./bash
+cp -puv ~/.vimrc             ./vim
+cp -puv ~/.tmux.conf         ./tmux
+cp -puv ~/.atom/styles.less  ./atom
+cp -puv ~/.Xresources        ./xterm
+cp -puv ~/.ycm_extra_conf.py ./ycm
 
 # Copy directories to back up
 cp -pruv ~/.atom/packages/  ./atom
