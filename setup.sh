@@ -65,7 +65,7 @@ if [ ! -d ${TERMINAL_COLOR} ]; then
     git clone https://github.com/Anthony25/${TERMINAL_COLOR}.git
     cd ${TERMINAL_COLOR}
     ./install.sh
-    cp -pruv ./dir_colors/ ~/
+    cp -pruv ./dir_colors/ ~/.dir_colors/
     # cd ../
     echo "${GREEN}Setting the terminal's colors successfully!${NORMAL}"
 else
