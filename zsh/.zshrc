@@ -85,17 +85,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set dircolor
+# Dircolor
 eval `dircolors ~/.dir_colors/dircolors.256dark`
 
-# Set 256 colors
+# 256 colors
 export TERM=xterm-256color
 
-# Set scitools understand
+# Scitools Understand
 export PATH=/home/myyerrol/Softwares/scitools/bin/linux64:${PATH}
 STIHOME=/home/myyerrol/Softwares/scitools
 
-# Set nvm
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# ROS
+source /opt/ros/kinetic/setup.zsh
