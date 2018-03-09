@@ -15,11 +15,7 @@ cp -puv ~/.bashrc            ./bash
 cp -puv ~/.vimrc             ./vim
 cp -puv ~/.tmux.conf         ./tmux
 cp -puv ~/.atom/styles.less  ./atom
-cp -puv ~/.Xresources        ./xterm
-cp -puv ~/.ycm_extra_conf.py ./ycm
-
-# Copy directories to back up
-cp -pruv ~/.atom/packages/  ./atom
+# cp -puv ~/.ycm_extra_conf.py ./ycm
 
 # Display some informations
 echo ""

@@ -57,11 +57,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 filetype plugin indent on
@@ -69,7 +70,7 @@ filetype plugin indent on
 " Plugin vim-airline
 set laststatus=2
 nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
+nnoremap <C-M> :bp<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -95,14 +96,18 @@ let g:miniBufExplModSelTarget = 1
 let g:miniBufExplMoreThanOne = 0
 
 " Plugin nerdtree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+    \ && b:NERDTree.isTabTree()) | q | endif
 map <C-e> :NERDTreeToggle<CR>
 let NERDTreeChDirMode = 1
-let NERDTreeShowBookmarks = 0
+let NERDTreeShowBookmarks = 1
 let NERDTreeWinSize = 25
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['\~$', '\.pyc$', '\.swp$', '\.git$']
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
 
 " Plugin ctrlp
 map <C-p> :CtrlP<CR>
@@ -113,24 +118,25 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 " Plugin tagbar
 nmap <C-t> :TagbarToggle<CR>
 let g:tagbar_width = 25
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 
 " Plugin YouCompleteMe
-set completeopt=longest,menu
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_cache_omnifunc = 0
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_error_symbol = '>>'
-let g:ycm_warning_symbol = '>*'
-let g:ycm_always_populate_location_list = 1
-let g:ycm_show_diagnostics_ui = 1
-nmap <C-Y> :YcmDiags<CR>
-nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
-nnoremap <Leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" set completeopt=longest,menu
+" let g:ycm_min_num_of_chars_for_completion = 2
+" let g:ycm_cache_omnifunc = 0
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_complete_in_strings = 1
+" let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" let g:ycm_error_symbol = '>>'
+" let g:ycm_warning_symbol = '>*'
+" let g:ycm_always_populate_location_list = 1
+" let g:ycm_show_diagnostics_ui = 1
+" nmap <C-Y> :YcmDiags<CR>
+" nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
+" nnoremap <Leader>gf :YcmCompleter GoToDefinition<CR>
+" nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Plugin ultisnips
 let g:UltiSnipsExpandTrigger = "<Leader><Tab>"
@@ -155,8 +161,22 @@ let g:syntastic_error_symbol='>>'
 let g:syntastic_warning_symbol='>*'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_remove_include_errors = 1
+
+" Plugin nerdtree-git-plugin
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
