@@ -4,9 +4,11 @@
 
 ## Description
 
-This repository contains some software configurations that are used commonly under Linux, such as vim, tmux, zsh, bash, atom, xterm, etc.
+Install, uninstall or backup configuration files that are used commonly under Linux, such as powerline, terminal, xterm, tmux, vim, zsh, etc.
 
-## Installation
+## Usage
+
+### Installation
 
 - Clone the repository to your Desktop:
 
@@ -19,19 +21,29 @@ This repository contains some software configurations that are used commonly und
 
   ```bash
   $> cd linux_user_configuration
-  $> ./setup.sh
+  $> ./setup.sh --install
   ```
 
-- **Because the installation of ZSH will cause the current script to exit, you can copy the `.zshrc` file to `HOME` manually:**
-
+- **Because the installation of ZSH may cause the current script to exit, you can copy the `.zshrc` file to `HOME` manually to solve this problem:**
+mar
   ```bash
-  $> cp -puv ./zsh/.zshrc ~/
+  $> cp -ipv ./zsh/.zshrc ${HOME}
   ```
 
-  or execute `setup.sh` once again:
+### Uninstall
+
+- Execute the following shell scrpit:
 
   ```bash
-  $> ./setup.sh
+  $> ./setup.sh --uninstall
+  ```
+
+### Backup
+
+- Execute the following shell scrpit:
+
+  ```bash
+  $> ./setup.sh --backup
   ```
 
 ## Configuration
@@ -40,14 +52,4 @@ This repository contains some software configurations that are used commonly und
 
 - Open the **Profile Preferences** in the current terminal.
 
-- Choose the **Gerenal** option and adjust the font with the name of **Powerline**.
-
-### Vim
-
-- Open the `.vimrc` by using vim:
-
-  ```bash
-  $> vim ~/.vimrc
-  ```
-
-- In command mode, enter **:PluginInstall** to install plugins.
+- Choose the **Gerenal** option and choose the font with the name of **Powerline**.

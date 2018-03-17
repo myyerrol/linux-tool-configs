@@ -125,6 +125,14 @@ setVimAndVundle()
         echo "${GREEN}Installing the vim successfully!${NORMAL}"
     fi
 
+    if comman -v ctags > /dev/null 2>&1; then
+        echo "${GREEN}Ctags has been installed successfully!${NORMAL}"
+        echo "${YELLOW}Ctags has not been installed!${NORMAL}"
+        echo "${BLUE}Installing the ctags...${NORMAL}"
+        sudo apt-get install exuberant-ctags
+        echo "${GREEN}Installing the Ctags successfully!${NORMAL}"
+    fi
+
     if [ ! -d ${PATH_HOME}/.vim/bundle/Vundle.vim ]; then
         echo "${BLUE}Downloading the vundle...${NORMAL}"
         git clone https://github.com/VundleVim/Vundle.vim.git ${PATH_HOME}/.vim/bundle/Vundle.vim
@@ -183,7 +191,7 @@ main()
     setTmux
     setVimAndVundle
     setZSH
-    
+
     displayCompletedInfo
 }
 
