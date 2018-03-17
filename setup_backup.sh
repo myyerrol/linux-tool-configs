@@ -28,12 +28,11 @@ setDisplayedColors()
 
 backupConfigurationFiles()
 {
-    cp -puv ~/.zshrc             ./zsh
-    cp -puv ~/.bashrc            ./bash
-    cp -puv ~/.vimrc             ./vim
-    cp -puv ~/.tmux.conf         ./tmux
-    cp -puv ~/.gitconfig         ./git
-    # cp -puv ~/.ycm_extra_conf.py ./ycm
+    cp -puv ~/.zshrc      ./zsh
+    cp -puv ~/.bashrc     ./bash
+    cp -puv ~/.vimrc      ./vim
+    cp -puv ~/.tmux.conf  ./tmux
+    cp -puv ~/.gitconfig  ./git
 }
 
 displayCompletedInfo()

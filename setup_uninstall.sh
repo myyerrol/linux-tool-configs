@@ -26,9 +26,28 @@ setDisplayedColors()
     fi
 }
 
+deleteConfigurationFiles()
+{
+    rm -ri ~/.zshrc
+    rm -ri ~/.bashrc
+    rm -ri ~/.vimrc
+    rm -ri ~/.tmux.conf
+    rm -ri ~/.gitconfig
+}
+
+displayCompletedInfo()
+{
+    echo ""
+    echo "${GREEN}Everything is ok! All configurations have been deleted!${NORMAL}"
+}
+
 main()
 {
     setDisplayedColors
+
+    deleteConfigurationFiles
+
+    displayCompletedInfo
 }
 
 # Run script
