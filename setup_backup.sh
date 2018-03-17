@@ -26,11 +26,31 @@ setDisplayedColors()
     fi
 }
 
+backupConfigurationFiles()
+{
+    cp -puv ~/.zshrc             ./zsh
+    cp -puv ~/.bashrc            ./bash
+    cp -puv ~/.vimrc             ./vim
+    cp -puv ~/.tmux.conf         ./tmux
+    cp -puv ~/.gitconfig         ./git
+    # cp -puv ~/.ycm_extra_conf.py ./ycm
+}
+
+displayCompletedInfo()
+{
+    echo ""
+    echo "${GREEN}Everything is ok! All configurations have been backed up!${NORMAL}"
+}
+
 main()
 {
     setDisplayedColors
+
+    backupConfigurationFiles
+
+    displayCompletedInfo
 }
 
 # Run script
 RUNNING=$(basename $0)
-[ "$RUNNING" = "setup_uninstall.sh" ] && main
+[ "$RUNNING" = "setup_backup.sh" ] && main

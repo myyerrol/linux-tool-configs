@@ -11,7 +11,7 @@ displayVersion()
 displayUsage()
 {
     echo "Usage:"
-    echo "./setup.sh [--install | --uninstall]"
+    echo "./setup.sh [--install | --uninstall | --backup]"
 }
 
 displayInfo()
@@ -33,11 +33,12 @@ displayHelp()
     displayUsage
     echo ""
     echo "Description:"
-    echo "Install or uninstall configuration files that are used commonly under Linux, such as vim, tmux, zsh, bash, xterm, etc. "
+    echo "Install, uninstall or backup configuration files that are used commonly under Linux, such as powerline, terminal, xterm, tmux, vim, zsh, etc."
     echo
     echo "--install       Install configuration files"
     echo "--uninstall     Uninstall configuration files"
-    echo "--version       Display repository version"
+    echo "--backup        Backup configuration files"
+    echo "--version       Display Version"
     echo ""
     echo "For more information, see https://github.com/myyerrol/linux_user_configuration"
     echo ""
@@ -65,6 +66,9 @@ case "$1" in
         ;;
     "--uninstall")
         bash ./setup_uninstall.sh
+        ;;
+    "--backup")
+        bash ./setup_backup.sh
         ;;
     *)
         echo "Unknown parameter: "$1"" >&2
