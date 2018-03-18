@@ -24,7 +24,7 @@ Install, uninstall or backup configuration files that are used commonly under Li
   $> ./setup.sh --install
   ```
 
-- **Because the installation of ZSH may cause the current script to exit, you can copy the `.zshrc` file to `HOME` manually to solve this problem:**
+- **Because the installation of ZSH will cause the current script to exit, you should copy the `.zshrc` file to `HOME` manually to solve this problem:**
 mar
   ```bash
   $> cp -ipv ./zsh/.zshrc ${HOME}

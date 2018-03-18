@@ -48,8 +48,7 @@ setPownlineFonts()
         unzip -n master.zip
         rm -rf master.zip
         mv fonts-master fonts
-        cd fonts
-        ./install.sh
+        ./fonts/install.sh
         cd - /dev/null 2>&1
         echo "${GREEN}Setting the powerline's fonts successfully!${NORMAL}"
     else
@@ -163,8 +162,6 @@ setZSH()
 
     chsh -s /bin/zsh
 
-    cp -ipv ${PATH_EXEC}/zsh/.zshrc ${PATH_HOME}/
-
     if [ ! -d ${PATH_HOME}/.oh-my-zsh ]; then
         echo "${BLUE}Downloading the oh-my-zsh...${NORMAL}"
         sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -172,6 +169,8 @@ setZSH()
     else
         echo "${GREEN}The oh-my-zsh has been set successfully!${NORMAL}"
     fi
+
+    cp -ipv ${PATH_EXEC}/zsh/.zshrc ${PATH_HOME}/
 }
 
 displayCompletedInfo()
