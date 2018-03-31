@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-[ -n "$LUC_DEBUG" ] && set -x
+[ -n "$LTC_DEBUG" ] && set -x
 
 PATH_HOME=${HOME}
 PATH_EXEC=${PWD}

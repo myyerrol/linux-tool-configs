@@ -40,17 +40,17 @@ displayHelp()
     echo "--backup        Backup configuration files"
     echo "--version       Display Version"
     echo ""
-    echo "For more information, see https://github.com/myyerrol/linux_user_configuration"
+    echo "For more information, see https://github.com/myyerrol/linux_tool_configuration"
     echo ""
 }
 
 if [ "$1" = "--debug" ]; then
-    export LUC_DEBUG=1
+    export LTC_DEBUG=1
     shift
 fi
 
-[ -n "${LUC_DEBUG}" ] && set -x
-    
+[ -n "${LTC_DEBUG}" ] && set -x
+
 case "$1" in
     "--version")
         displayVersion
@@ -77,4 +77,4 @@ case "$1" in
         ;;
 esac
 
-unset LUC_DEBUG
+unset LTC_DEBUG
