@@ -41,14 +41,14 @@ setSoftwaresDirectory()
 
 setPownlineFonts()
 {
-    if [ ! -d ${PATH_HOME}/Softwares/fonts ]; then
+    if [ ! -d ${PATH_HOME}/Softwares/fonts-powerline ]; then
         echo "${BLUE}Downloading the fonts of powerline...${NORMAL}"
         cd ${PATH_HOME}/Softwares
         wget https://github.com/powerline/fonts/archive/master.zip
         unzip -n master.zip
         rm -rf master.zip
-        mv fonts-master fonts
-        ./fonts/install.sh
+        mv fonts-master fonts-powerline
+        ./fonts-powerline/install.sh
         cd - /dev/null 2>&1
         echo "${GREEN}Setting the powerline's fonts successfully!${NORMAL}"
     else
