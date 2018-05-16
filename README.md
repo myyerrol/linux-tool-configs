@@ -53,3 +53,4 @@ mar
 - Open the **Profile Preferences** in the current terminal.
 
 - Choose the **Gerenal** option and choose the font with the name of **Powerline**.
+
