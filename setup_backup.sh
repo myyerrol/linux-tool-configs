@@ -28,11 +28,13 @@ setDisplayedColors()
 
 backupConfigurationFiles()
 {
-    cp -puv ~/.zshrc      ./zsh
-    cp -puv ~/.bashrc     ./bash
-    cp -puv ~/.vimrc      ./vim
-    cp -puv ~/.tmux.conf  ./tmux
-    cp -puv ~/.gitconfig  ./git
+    cp -puv ~/.zshrc            ./zsh
+    cp -puv ~/.bashrc           ./bash
+    cp -puv ~/.vimrc            ./vim
+    cp -puv ~/.tmux.conf        ./tmux
+    cp -puv ~/.gitconfig        ./git
+    cp -puv ~/.atom/styles.less ./atom
+    cp -puv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings ./sublime
 }
 
 displayCompletedInfo()

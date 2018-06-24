@@ -100,3 +100,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# ROS
+source /opt/ros/kinetic/setup.zsh
+source /home/myyerrol/Desktop/ros_workspace/devel/setup.zsh
