@@ -34,7 +34,9 @@ backupConfigurationFiles()
     cp -puv ~/.tmux.conf        ./tmux
     cp -puv ~/.gitconfig        ./git
     cp -puv ~/.atom/styles.less ./atom
-    cp -puv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings ./sublime
+    cp -puv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings       ./sublime
+    cp -puv ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings  ./sublime
+    cp -puv ~/.config/sublime-text-3/Packages/Theme\ -\ Default/Default.sublime-theme ./sublime
 }
 
 displayCompletedInfo()
