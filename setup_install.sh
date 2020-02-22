@@ -44,7 +44,9 @@ setPownlineFonts()
     if [ ! -d ${PATH_HOME}/Softwares/fonts-powerline ]; then
         echo "${BLUE}Downloading the fonts of powerline...${NORMAL}"
         cd ${PATH_HOME}/Softwares
-        wget https://github.com/powerline/fonts/archive/master.zip
+        if [ ! -f "./master.zip" ]; then
+            wget https://github.com/powerline/fonts/archive/master.zip
+        fi
         unzip -n master.zip
         rm -rf master.zip
         mv fonts-master fonts-powerline
