@@ -2,20 +2,17 @@
 
 set -e
 
-displayVersion()
-{
+displayVersion() {
     echo "Version:"
     echo "1.0.0"
 }
 
-displayUsage()
-{
+displayUsage() {
     echo "Usage:"
     echo "./setup.sh [--install | --uninstall | --backup]"
 }
 
-displayInfo()
-{
+displayInfo() {
     echo "Author:"
     echo "myyerrol"
     echo ""
@@ -23,8 +20,7 @@ displayInfo()
     echo "2017-01-13"
 }
 
-displayHelp()
-{
+displayHelp() {
     echo ""
     displayInfo
     echo ""

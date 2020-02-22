@@ -3,8 +3,7 @@
 set -e
 [ -n "$LTC_DEBUG" ] && set -x
 
-setDisplayedColors()
-{
+setDisplayedColors() {
     if command -v tput > /dev/null 2>&1; then
         ncolors=$(tput colors)
     fi
@@ -26,31 +25,27 @@ setDisplayedColors()
     fi
 }
 
-backupConfigurationFiles()
-{
+backupConfigurationFiles() {
     cp -puv ~/.zshrc            ./zsh
     cp -puv ~/.bashrc           ./bash
     cp -puv ~/.vimrc            ./vim
     cp -puv ~/.tmux.conf        ./tmux
     cp -puv ~/.gitconfig        ./git
-    cp -puv ~/.atom/styles.less ./atom
-    cp -puv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings       ./sublime
-    cp -puv ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings  ./sublime
-    cp -puv ~/.config/sublime-text-3/Packages/Theme\ -\ Default/Default.sublime-theme ./sublime
+    if [ -d ~/config/sublime-text-3 ]; then
+        cp -puv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings       ./sublime
+        cp -puv ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings  ./sublime
+        cp -puv ~/.config/sublime-text-3/Packages/Theme\ -\ Default/Default.sublime-theme ./sublime
+    fi
 }
 
-displayCompletedInfo()
-{
+displayCompletedInfo() {
     echo ""
     echo "${GREEN}Everything is ok! All configurations have been backed up!${NORMAL}"
 }
 
-main()
-{
+main() {
     setDisplayedColors
-
     backupConfigurationFiles
-
     displayCompletedInfo
 }
 

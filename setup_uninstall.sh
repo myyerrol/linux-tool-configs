@@ -3,8 +3,7 @@
 set -e
 [ -n "$LTC_DEBUG" ] && set -x
 
-setDisplayedColors()
-{
+setDisplayedColors() {
     if command -v tput > /dev/null 2>&1; then
         ncolors=$(tput colors)
     fi
@@ -26,8 +25,7 @@ setDisplayedColors()
     fi
 }
 
-deleteConfigurationFiles()
-{
+deleteConfigurationFiles() {
     rm -ri ~/.zshrc
     rm -ri ~/.bashrc
     rm -ri ~/.vimrc
@@ -35,18 +33,14 @@ deleteConfigurationFiles()
     rm -ri ~/.gitconfig
 }
 
-displayCompletedInfo()
-{
+displayCompletedInfo() {
     echo ""
     echo "${GREEN}Everything is ok! All configurations have been deleted!${NORMAL}"
 }
 
-main()
-{
+main() {
     setDisplayedColors
-
     deleteConfigurationFiles
-
     displayCompletedInfo
 }
 

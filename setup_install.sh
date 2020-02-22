@@ -6,8 +6,7 @@ set -e
 PATH_HOME=${HOME}
 PATH_EXEC=${PWD}
 
-setDisplayedColors()
-{
+setDisplayedColors() {
     if command -v tput > /dev/null 2>&1; then
         ncolors=$(tput colors)
     fi
@@ -29,8 +28,7 @@ setDisplayedColors()
     fi
 }
 
-setSoftwaresDirectory()
-{
+setSoftwaresDirectory() {
     if [ ! -d ${PATH_HOME}/Softwares ]; then
         mkdir ${PATH_HOME}/Softwares
         echo "${GREEN}Creating the directory of softwares successfully!${NORMAL}"
@@ -39,8 +37,7 @@ setSoftwaresDirectory()
     fi
 }
 
-setPownlineFonts()
-{
+setPownlineFonts() {
     if [ ! -d ${PATH_HOME}/Softwares/fonts-powerline ]; then
         echo "${BLUE}Downloading the fonts of powerline...${NORMAL}"
         cd ${PATH_HOME}/Softwares
@@ -58,8 +55,7 @@ setPownlineFonts()
     fi
 }
 
-setTerminalColor()
-{
+setTerminalColor() {
     TERMINAL_COLOR="gnome-terminal-colors-solarized"
 
     if [ ! -d ${PATH_HOME}/Softwares/${TERMINAL_COLOR} ]; then
@@ -77,8 +73,7 @@ setTerminalColor()
     fi
 }
 
-setXterm()
-{
+setXterm() {
     if command -v xterm > /dev/null 2>&1; then
         echo "${GREEN}Xterm has been installed successfully!${NORMAL}"
     else
@@ -101,8 +96,7 @@ setXterm()
     xrdb -load ${PATH_HOME}/.Xresources
 }
 
-setTmux()
-{
+setTmux() {
     if command -v tmux > /dev/null 2>&1; then
         echo "${GREEN}Tmux has been installed successfully!${NORMAL}"
     else
@@ -115,8 +109,7 @@ setTmux()
     cp -puv ${PATH_EXEC}/tmux/.tmux.conf ${PATH_HOME}/
 }
 
-setVimAndVundle()
-{
+setVimAndVundle() {
     if command -v vim > /dev/null 2>&1; then
         echo "${GREEN}Vim has been installed successfully!${NORMAL}"
     else
@@ -151,8 +144,7 @@ setVimAndVundle()
     vim +PluginInstall +qall
 }
 
-setZSH()
-{
+setZSH() {
     if command -v zsh > /dev/null 2>&1; then
         echo "${GREEN}ZSH has been installed successfully!${NORMAL}"
     else
@@ -175,14 +167,12 @@ setZSH()
     cp -ipv ${PATH_EXEC}/zsh/.zshrc ${PATH_HOME}/
 }
 
-displayCompletedInfo()
-{
+displayCompletedInfo() {
     echo ""
     echo "${GREEN}Everything is ok! Start to enjoy it!${NORMAL}"
 }
 
-main()
-{
+main() {
     setDisplayedColors
     setSoftwaresDirectory
 
