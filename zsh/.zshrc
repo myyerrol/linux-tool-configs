@@ -92,8 +92,8 @@ eval `dircolors ~/.dir_colors/dircolors.256dark`
 export TERM=xterm-256color
 
 # Scitools Understand
-export PATH=/home/myyerrol/Softwares/scitools/bin/linux64:$PATH
-STIHOME=/home/myyerrol/Softwares/scitools
+# export PATH=$HOME/Softwares/scitools/bin/linux64:$PATH
+# STIHOME=$HOME/Softwares/scitools
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -105,7 +105,11 @@ export NVM_DIR="$HOME/.nvm"
 # source /home/myyerrol/Desktop/ros_workspace/devel/setup.zsh
 
 # Java
-export JAVA_HOME=/opt/jdk1.8.0_181
+export JAVA_HOME=/opt/jdk1.8.0_241
 export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+
+# Tomcat
+export CATALINA_HOME=$HOME/Softwares/apache-tomcat-8.5.51
+export PATH=$CATALINA_HOME/bin:$PATH
