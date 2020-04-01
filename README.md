@@ -1,6 +1,6 @@
-# linux_tool_configuration
+# linux_tool_configurations
 
-![linux_tool_configuration](.images/linux_tool_configuration.png)
+![linux_tool_configurations](.images/linux_tool_configurations.png)
 
 ## Description
 
@@ -14,13 +14,13 @@ Install, uninstall or backup configuration files that are used commonly under Li
 
   ```bash
   $> cd Desktop
-  $> git clone https://github.com/myyerrol/linux_tool_configuration.git
+  $> git clone https://github.com/myyerrol/linux_tool_configurations.git
   ```
 
 - Execute the following shell scrpit:
 
   ```bash
-  $> cd linux_user_configuration
+  $> cd linux_tool_configurations
   $> ./setup.sh --install
   ```
 
