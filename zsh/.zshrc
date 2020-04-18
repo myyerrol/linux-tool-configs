@@ -101,8 +101,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ROS
-# source /opt/ros/kinetic/setup.zsh
-# source /home/myyerrol/Desktop/ros_workspace/devel/setup.zsh
+source /opt/ros/kinetic/setup.zsh
+source /home/myyerrol/Workspaces/ros_workspace/devel/setup.zsh
 
 # Java
 export JAVA_HOME=/opt/jdk1.8.0_241
