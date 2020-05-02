@@ -113,3 +113,11 @@ export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 # Tomcat
 export CATALINA_HOME=$HOME/Softwares/apache-tomcat-8.5.51
 export PATH=$CATALINA_HOME/bin:$PATH
+
+# Modelsim
+export PATH=/opt/modelsim/modeltech/linux:$PATH
+export LM_LICENSE_FILE=$HOME/Documents/license/modelsim/license.dat
+
+# Quartus II
+export PATH=/opt/altera/13.0sp1/quartus/bin:$PATH
+export LM_LICENSE_FILE=$HOME/Documents/license/quartus/license.dat:$LM_LICENSE_FILE
