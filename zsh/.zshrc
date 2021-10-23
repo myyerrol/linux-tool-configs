@@ -116,8 +116,11 @@ export PATH=$CATALINA_HOME/bin:$PATH
 
 # Modelsim
 export PATH=/opt/modelsim/modeltech/linux:$PATH
-export LM_LICENSE_FILE=$HOME/Documents/license/modelsim/license.dat
+export LM_LICENSE_FILE=$HOME/Documents/License/modelsim/license.dat
 
 # Quartus II
 export PATH=/opt/altera/13.0sp1/quartus/bin:$PATH
-export LM_LICENSE_FILE=$HOME/Documents/license/quartus/license.dat:$LM_LICENSE_FILE
+export LM_LICENSE_FILE=$HOME/Documents/License/quartus/license.dat:$LM_LICENSE_FILE
+
+# Unity service
+export QT_QPA_PLATFORMTHEME=appmenu-qt5
