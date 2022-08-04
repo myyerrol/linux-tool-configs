@@ -168,7 +168,7 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_remove_include_errors = 1
 
 " Plugin nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
