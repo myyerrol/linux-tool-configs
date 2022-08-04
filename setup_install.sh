@@ -48,7 +48,7 @@ setPownlineFonts() {
         rm -rf master.zip
         mv fonts-master fonts-powerline
         ./fonts-powerline/install.sh
-        cd - /dev/null 2>&1
+        cd - > /dev/null 2>&1
         echo "${GREEN}Setting the powerline's fonts successfully!${NORMAL}"
     else
         echo "${GREEN}The powerline's fonts have been set successfully!${NORMAL}"
@@ -65,7 +65,7 @@ setTerminalColor() {
         git clone https://github.com/Anthony25/${TERMINAL_COLOR}.git
         cd ${TERMINAL_COLOR}
         ./install.sh
-        cd - /dev/null 2>&1
+        cd - > /dev/null 2>&1
         cp -pruv ./dir_colors/ ${PATH_HOME}/.dir_colors/
         echo "${GREEN}Setting the terminal's colors successfully!${NORMAL}"
     else
@@ -75,9 +75,9 @@ setTerminalColor() {
 
 setXterm() {
     if command -v xterm > /dev/null 2>&1; then
-        echo "${GREEN}Xterm has been installed successfully!${NORMAL}"
+        echo "${GREEN}The xterm has been installed successfully!${NORMAL}"
     else
-        echo "${YELLOW}Xterm has not been installed!${NORMAL}"
+        echo "${YELLOW}The xterm has not been installed!${NORMAL}"
         echo "${BLUE}Installing the xterm...${NORMAL}"
         sudo apt-get install xterm
         echo "${GREEN}Installing the xterm successfully!${NORMAL}"
@@ -87,7 +87,7 @@ setXterm() {
         echo "${GREEN}The wqy-microhei font has been installed successfully!${NORMAL}"
     else
         echo "${YELLOW}The wqy-microhei font has not been installed!${NORMAL}"
-        echo "${BLUE}install the wqy-microhei font...${NORMAL}"
+        echo "${BLUE}Installing the wqy-microhei font...${NORMAL}"
         sudo apt-get install ttf-wqy-microhei
         echo "${GREEN}Installing the wqy-microhei font successfully!${NORMAL}"
     fi
@@ -98,9 +98,9 @@ setXterm() {
 
 setTmux() {
     if command -v tmux > /dev/null 2>&1; then
-        echo "${GREEN}Tmux has been installed successfully!${NORMAL}"
+        echo "${GREEN}The tmux has been installed successfully!${NORMAL}"
     else
-        echo "${YELLOW}Tmux has not been installed!${NORMAL}"
+        echo "${YELLOW}The tmux has not been installed!${NORMAL}"
         echo "${BLUE}Installing the tmux...${NORMAL}"
         sudo apt-get install tmux
         echo "${GREEN}Installing the tmux successfully!${NORMAL}"
@@ -111,20 +111,20 @@ setTmux() {
 
 setVimAndVundle() {
     if command -v vim > /dev/null 2>&1; then
-        echo "${GREEN}Vim has been installed successfully!${NORMAL}"
+        echo "${GREEN}The vim has been installed successfully!${NORMAL}"
     else
-        echo "${YELLOW}Vim has not been installed!${NORMAL}"
+        echo "${YELLOW}The vim has not been installed!${NORMAL}"
         echo "${BLUE}Installing the vim...${NORMAL}"
         sudo apt-get install vim
         echo "${GREEN}Installing the vim successfully!${NORMAL}"
     fi
 
     if comman -v ctags > /dev/null 2>&1; then
-        echo "${GREEN}Ctags has been installed successfully!${NORMAL}"
-        echo "${YELLOW}Ctags has not been installed!${NORMAL}"
+        echo "${GREEN}The ctags has been installed successfully!${NORMAL}"
+        echo "${YELLOW}The ctags has not been installed!${NORMAL}"
         echo "${BLUE}Installing the ctags...${NORMAL}"
         sudo apt-get install exuberant-ctags
-        echo "${GREEN}Installing the Ctags successfully!${NORMAL}"
+        echo "${GREEN}Installing the ctags successfully!${NORMAL}"
     fi
 
     if [ ! -d ${PATH_HOME}/.vim/bundle/Vundle.vim ]; then
@@ -135,7 +135,7 @@ setVimAndVundle() {
         echo "${GREEN}The vundle has been set successfully! Updating...${NORMAL}"
         cd ${PATH_HOME}/.vim/bundle/Vundle.vim
         git pull
-        cd - /dev/null 2>&1
+        cd - > /dev/null 2>&1
     fi
 
     cp -puv ${PATH_EXEC}/vim/.vimrc ${PATH_HOME}/
@@ -146,9 +146,9 @@ setVimAndVundle() {
 
 setZSH() {
     if command -v zsh > /dev/null 2>&1; then
-        echo "${GREEN}ZSH has been installed successfully!${NORMAL}"
+        echo "${GREEN}The zsh has been installed successfully!${NORMAL}"
     else
-        echo "${YELLOW}ZSH has not been installed!${NORMAL}"
+        echo "${YELLOW}The zsh has not been installed!${NORMAL}"
         echo "${BLUE}Installing the zsh...${NORMAL}"
         sudo apt-get install zsh
         echo "${GREEN}Installing the zsh successfully!${NORMAL}"
@@ -158,7 +158,7 @@ setZSH() {
 
     if [ ! -d ${PATH_HOME}/.oh-my-zsh ]; then
         echo "${BLUE}Downloading the oh-my-zsh...${NORMAL}"
-        sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+        sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         echo "${GREEN}Setting the oh-my-zsh successfully!${NORMAL}"
     else
         echo "${GREEN}The oh-my-zsh has been set successfully!${NORMAL}"

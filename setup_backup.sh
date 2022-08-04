@@ -26,16 +26,11 @@ setDisplayedColors() {
 }
 
 backupConfigurationFiles() {
-    cp -puv ~/.zshrc            ./zsh
-    cp -puv ~/.bashrc           ./bash
-    cp -puv ~/.vimrc            ./vim
-    cp -puv ~/.tmux.conf        ./tmux
-    cp -puv ~/.gitconfig        ./git
-    if [ -d ~/config/sublime-text-3 ]; then
-        cp -puv ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings       ./sublime
-        cp -puv ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings  ./sublime
-        cp -puv ~/.config/sublime-text-3/Packages/Theme\ -\ Default/Default.sublime-theme ./sublime
-    fi
+    cp -puv ~/.zshrc        ./zsh
+    cp -puv ~/.bashrc       ./bash
+    cp -puv ~/.vimrc        ./vim
+    cp -puv ~/.tmux.conf    ./tmux
+    cp -puv ~/.gitconfig    ./git
 }
 
 displayCompletedInfo() {
