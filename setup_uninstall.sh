@@ -26,11 +26,11 @@ setDisplayedColors() {
 }
 
 deleteConfigurationFiles() {
-    rm -ri ~/.zshrc
-    rm -ri ~/.bashrc
-    rm -ri ~/.vimrc
     rm -ri ~/.tmux.conf
     rm -ri ~/.gitconfig
+    rm -ri ~/.vimrc
+    rm -ri ~/.zshrc
+    rm -ri ~/.bashrc
 }
 
 displayCompletedInfo() {

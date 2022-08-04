@@ -122,7 +122,7 @@ setGit() {
     cp -puv ${PATH_EXEC}/git/.gitconfig ${PATH_HOME}/
 }
 
-setVimAndVundle() {
+setVim() {
     if command -v vim > /dev/null 2>&1; then
         echo "${GREEN}The vim has been installed successfully!${NORMAL}"
     else
@@ -194,7 +194,7 @@ main() {
     setXterm
     setTmux
     setGit
-    setVimAndVundle
+    setVim
     setZsh
 
     displayCompletedInfo

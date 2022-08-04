@@ -26,11 +26,11 @@ setDisplayedColors() {
 }
 
 backupConfigurationFiles() {
-    cp -puv ~/.zshrc        ./zsh
-    cp -puv ~/.bashrc       ./bash
-    cp -puv ~/.vimrc        ./vim
     cp -puv ~/.tmux.conf    ./tmux
     cp -puv ~/.gitconfig    ./git
+    cp -puv ~/.vimrc        ./vim
+    cp -puv ~/.zshrc        ./zsh
+    cp -puv ~/.bashrc       ./bash
 }
 
 displayCompletedInfo() {
