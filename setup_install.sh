@@ -109,6 +109,19 @@ setTmux() {
     cp -puv ${PATH_EXEC}/tmux/.tmux.conf ${PATH_HOME}/
 }
 
+setGit() {
+    if command -v git > /dev/null 2>&1; then
+        echo "${GREEN}The git has been installed successfully!${NORMAL}"
+    else
+        echo "${YELLOW}The git has not been installed!${NORMAL}"
+        echo "${BLUE}Installing the git...${NORMAL}"
+        sudo apt-get install git
+        echo "${GREEN}Installing the git successfully!${NORMAL}"
+    fi
+
+    cp -puv ${PATH_EXEC}/git/.gitconfig ${PATH_HOME}/
+}
+
 setVimAndVundle() {
     if command -v vim > /dev/null 2>&1; then
         echo "${GREEN}The vim has been installed successfully!${NORMAL}"
@@ -144,7 +157,7 @@ setVimAndVundle() {
     vim +PluginInstall +qall
 }
 
-setZSH() {
+setZsh() {
     if command -v zsh > /dev/null 2>&1; then
         echo "${GREEN}The zsh has been installed successfully!${NORMAL}"
     else
@@ -180,8 +193,9 @@ main() {
     setTerminalColor
     setXterm
     setTmux
+    setGit
     setVimAndVundle
-    setZSH
+    setZsh
 
     displayCompletedInfo
 }
