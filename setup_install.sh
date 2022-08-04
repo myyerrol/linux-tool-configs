@@ -62,7 +62,7 @@ setTerminalColor() {
         echo "${BLUE}Downloading the ${TERMINAL_COLOR}...${NORMAL}"
         cd ${PATH_HOME}/Softwares
         sudo apt-get install dconf-cli
-        git clone https://github.com/Anthony25/${TERMINAL_COLOR}.git
+        git clone https://github.com/Anthony25/${TERMINAL_COLOR}
         cd ${TERMINAL_COLOR}
         ./install.sh
         cd - > /dev/null 2>&1
@@ -106,6 +106,17 @@ setTmux() {
         echo "${GREEN}Installing the tmux successfully!${NORMAL}"
     fi
 
+    if [ ! -d ${PATH_HOME}/.tmux/plugins/tpm ]; then
+        echo "${BLUE}Downloading the tpm...${NORMAL}"
+        git clone https://github.com/tmux-plugins/tpm ${PATH_HOME}/.tmux/plugins/tpm
+        echo "${GREEN}Setting the tpm successfully!${NORMAL}"
+    else
+        echo "${GREEN}The tpm has been set successfully! Updating...${NORMAL}"
+        cd ${PATH_HOME}/.tmux/plugins/tpm
+        git pull
+        cd - > /dev/null 2>&1
+    fi
+
     cp -puv ${PATH_EXEC}/tmux/.tmux.conf ${PATH_HOME}/
 }
 
@@ -142,7 +153,7 @@ setVim() {
 
     if [ ! -d ${PATH_HOME}/.vim/bundle/Vundle.vim ]; then
         echo "${BLUE}Downloading the vundle...${NORMAL}"
-        git clone https://github.com/VundleVim/Vundle.vim.git ${PATH_HOME}/.vim/bundle/Vundle.vim
+        git clone https://github.com/VundleVim/Vundle.vim ${PATH_HOME}/.vim/bundle/Vundle.vim
         echo "${GREEN}Setting the vundle successfully!${NORMAL}"
     else
         echo "${GREEN}The vundle has been set successfully! Updating...${NORMAL}"
@@ -189,13 +200,13 @@ main() {
     setDisplayedColors
     setSoftwaresDirectory
 
-    setPownlineFonts
-    setTerminalColor
-    setXterm
+    # setPownlineFonts
+    # setTerminalColor
+    # setXterm
     setTmux
-    setGit
-    setVim
-    setZsh
+    # setGit
+    # setVim
+    # setZsh
 
     displayCompletedInfo
 }
