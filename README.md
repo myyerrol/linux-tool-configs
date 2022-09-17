@@ -1,10 +1,10 @@
-# linux_tool_configurations
+# linux_tool_configs
 
-![linux_tool_configurations](.images/linux_tool_configurations.png)
+![linux_tool_configs](.images/linux_tool_configs.png)
 
 ## Description
 
-Install, uninstall or backup configuration files that are used commonly under Linux, such as powerline, terminal, xterm, tmux, vim, zsh, etc.
+Install, uninstall or backup config files that are used commonly under Linux, such as powerline, terminal, xterm, tmux, vim, zsh, etc.
 
 ## Usage
 
@@ -14,13 +14,13 @@ Install, uninstall or backup configuration files that are used commonly under Li
 
   ```bash
   $> cd Desktop
-  $> git clone https://github.com/myyerrol/linux_tool_configurations.git
+  $> git clone https://github.com/myyerrol/linux_tool_configs.git
   ```
 
 - Execute the following shell scrpit:
 
   ```bash
-  $> cd linux_tool_configurations
+  $> cd linux_tool_configs
   $> ./setup.sh --install
   ```
 
