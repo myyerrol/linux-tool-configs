@@ -111,3 +111,9 @@ export TERM=xterm-256color
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# YSYX
+export NEMU_HOME=/home/myyerrol/Workspaces/ysyx-workbench/nemu
+export AM_HOME=/home/myyerrol/Workspaces/ysyx-workbench/abstract-machine
+export NPC_HOME=/home/myyerrol/Workspaces/ysyx-workbench/npc
+export NVBOARD_HOME=/home/myyerrol/Workspaces/ysyx-workbench/nvboard
