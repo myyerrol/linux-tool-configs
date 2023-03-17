@@ -66,7 +66,7 @@ setTerminalColor() {
         cd ${TERMINAL_COLOR}
         ./install.sh
         cd - > /dev/null 2>&1
-        cp -pruv ./dir_colors/ ${PATH_HOME}/.dir_colors/
+        cp -pruv ${PATH_EXEC}/dir_colors/ ${PATH_HOME}/.dir_colors/
         echo "${GREEN}Setting the terminal's colors successfully!${NORMAL}"
     else
         echo "${GREEN}The terminal's colors have been set successfully!${NORMAL}"
@@ -115,6 +115,7 @@ setTmux() {
         cd ${PATH_HOME}/.tmux/plugins/tpm
         git pull
         cd - > /dev/null 2>&1
+        echo "${YELLOW}Install the tmux plugins using the command: <prefix>+<shift><i>${NORMAL}"
     fi
 
     cp -puv ${PATH_EXEC}/tmux/.tmux.conf ${PATH_HOME}/
@@ -200,13 +201,13 @@ main() {
     setDisplayedColors
     setSoftwaresDirectory
 
-    # setPownlineFonts
-    # setTerminalColor
-    # setXterm
+    setPownlineFonts
+    setTerminalColor
+    setXterm
     setTmux
-    # setGit
-    # setVim
-    # setZsh
+    setGit
+    setVim
+    setZsh
 
     displayCompletedInfo
 }
