@@ -117,3 +117,6 @@ export NEMU_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/nemu
 export AM_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/abstract-machine
 export NPC_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/npc
 export NVBOARD_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/nvboard
+
+# Mill
+export PATH=/home/myyerrol/Softwares/mill:$PATH
