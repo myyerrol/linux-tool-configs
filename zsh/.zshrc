@@ -107,16 +107,19 @@ eval `dircolors ~/.dir_colors/dircolors.256dark`
 # 256 colors
 export TERM=xterm-256color
 
+# Local Bin
+export PATH=$HOME/.local/bin:$PATH
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # YSYX
-export NEMU_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/nemu
-export AM_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/abstract-machine
-export NPC_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/npc
-export NVBOARD_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/nvboard
+export NEMU_HOME=$HOME/Workspaces/ysyx-cpu-core/nemu
+export AM_HOME=$HOME/Workspaces/ysyx-cpu-core/abstract-machine
+export NPC_HOME=$HOME/Workspaces/ysyx-cpu-core/npc
+export NVBOARD_HOME=$HOME/Workspaces/ysyx-cpu-core/nvboard
 
 # Mill
-export PATH=/home/myyerrol/Softwares/mill:$PATH
+export PATH=$HOME/Softwares/mill:$PATH
