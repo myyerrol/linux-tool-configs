@@ -116,9 +116,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # YSYX
-export NEMU_HOME=$HOME/Workspaces/ysyx-cpu-core/nemu
 export AM_HOME=$HOME/Workspaces/ysyx-cpu-core/abstract-machine
-export AM_TEST_HOME=$HOME/Workspaces/ysyx-cpu-core/am-kernels
+export NEMU_HOME=$HOME/Workspaces/ysyx-cpu-core/nemu
 export NPC_HOME=$HOME/Workspaces/ysyx-cpu-core/npc
 export NVBOARD_HOME=$HOME/Workspaces/ysyx-cpu-core/nvboard
 
