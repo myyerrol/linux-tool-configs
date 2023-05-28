@@ -117,6 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # YSYX
 export AM_HOME=$HOME/Workspaces/ysyx-cpu-core/abstract-machine
+export NAVY_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/navy-apps
 export NEMU_HOME=$HOME/Workspaces/ysyx-cpu-core/nemu
 export NPC_HOME=$HOME/Workspaces/ysyx-cpu-core/npc
 export NVBOARD_HOME=$HOME/Workspaces/ysyx-cpu-core/nvboard
