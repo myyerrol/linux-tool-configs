@@ -189,6 +189,14 @@ setZsh() {
         echo "${GREEN}The oh-my-zsh has been set successfully!${NORMAL}"
     fi
 
+    if [ ! -d ${PATH_HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+        echo "${BLUE}Downloading the zsh-autosuggestions...${NORMAL}"
+        git clone https://github.com/zsh-users/zsh-autosuggestions ${PATH_HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        echo "${GREEN}Setting the zsh-autosuggestions successfully!${NORMAL}"
+    else
+        echo "${GREEN}The zsh-autosuggestions has been set successfully!${NORMAL}"
+    fi
+
     cp -ipv ${PATH_EXEC}/zsh/.zshrc ${PATH_HOME}/
 }
 

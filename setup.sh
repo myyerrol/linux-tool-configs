@@ -9,7 +9,7 @@ displayVersion() {
 
 displayUsage() {
     echo "Usage:"
-    echo "./setup.sh [--install | --uninstall | --backup]"
+    echo "./setup.sh [-i | -u | -b]"
 }
 
 displayInfo() {
@@ -31,10 +31,10 @@ displayHelp() {
     echo "Description:"
     echo "Install, uninstall or backup configuration files that are used commonly under Linux, such as powerline, terminal, xterm, tmux, vim, zsh, etc."
     echo
-    echo "--install       Install configuration files"
-    echo "--uninstall     Uninstall configuration files"
-    echo "--backup        Backup configuration files"
-    echo "--version       Display Version"
+    echo "-i     Install configuration files"
+    echo "-u     Uninstall configuration files"
+    echo "-b     Backup configuration files"
+    echo "-v     Display Version"
     echo ""
     echo "For more information, see https://github.com/myyerrol/linux_tool_configuration"
     echo ""
@@ -48,22 +48,22 @@ fi
 [ -n "${LTC_DEBUG}" ] && set -x
 
 case "$1" in
-    "--version")
+    "-v")
         displayVersion
         ;;
-    "--usage")
+    "-u")
         displayUsage
         ;;
-    "--help")
+    "-h")
         displayHelp
         ;;
-    "--install")
+    "-i")
         bash ./setup_install.sh
         ;;
-    "--uninstall")
+    "-u")
         bash ./setup_uninstall.sh
         ;;
-    "--backup")
+    "-b")
         bash ./setup_backup.sh
         ;;
     *)
