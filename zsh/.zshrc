@@ -71,7 +71,7 @@ DEFAULT_USER=$USER
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,6 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Alias
+alias sbhrc="source ~/.bshrc"
+alias szhrc="source ~/.zshrc"
+
 # Dircolor
 eval `dircolors ~/.dir_colors/dircolors.256dark`
 
@@ -115,12 +119,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# YSYX
-export AM_HOME=$HOME/Workspaces/ysyx-cpu-core/abstract-machine
-export NAVY_HOME=/home/myyerrol/Workspaces/ysyx-cpu-core/navy-apps
-export NEMU_HOME=$HOME/Workspaces/ysyx-cpu-core/nemu
-export NPC_HOME=$HOME/Workspaces/ysyx-cpu-core/npc
-export NVBOARD_HOME=$HOME/Workspaces/ysyx-cpu-core/nvboard
-
 # Mill
 export PATH=$HOME/Softwares/mill:$PATH
+
+# MongoDB
+export MONGODB_HOME=$HOME/Softwares/mongodb
+export PATH=$MONGODB_HOME/bin:$PATH
+
+# YSYX
+export YSYX_REPO=ysyx-npc-workbench
+export AM_HOME=$HOME/Workspaces/$YSYX_REPO/abstract-machine
+export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
+export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
+export NPC_HOME=$HOME/Workspaces/$YSYX_REPO/npc
+export NVBOARD_HOME=$HOME/Workspaces/$YSYX_REPO/nvboard
