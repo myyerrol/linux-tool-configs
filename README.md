@@ -1,6 +1,6 @@
-# linux_tool_configs
+# linux-tool-configs
 
-![linux_tool_configs](.images/linux_tool_configs.png)
+![](.images/screenshot.png)
 
 ## Description
 
@@ -14,7 +14,7 @@ Install, uninstall or backup config files that are used commonly under Linux, su
 
   ```bash
   $> cd Desktop
-  $> git clone https://github.com/myyerrol/linux_tool_configs.git
+  $> git clone https://github.com/myyerrol/linux-tool-configs.git
   ```
 
 - Execute the following shell scrpit:
