@@ -102,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Alias
-alias sbhrc="source ~/.bshrc"
-alias szhrc="source ~/.zshrc"
+alias sbsh="source ~/.bshrc"
+alias szsh="source ~/.zshrc"
 
 # Dircolor
 eval `dircolors ~/.dir_colors/dircolors.256dark`
@@ -122,12 +122,11 @@ export NVM_DIR="$HOME/.nvm"
 # Mill
 export PATH=$HOME/Softwares/mill:$PATH
 
-# MongoDB
-export MONGODB_HOME=$HOME/Softwares/mongodb
-export PATH=$MONGODB_HOME/bin:$PATH
+# Cargo
+. "$HOME/.cargo/env"
 
 # YSYX
-export YSYX_REPO=ysyx-npc-workbench
+export YSYX_REPO=ysyx-cpu-core
 export AM_HOME=$HOME/Workspaces/$YSYX_REPO/abstract-machine
 export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
