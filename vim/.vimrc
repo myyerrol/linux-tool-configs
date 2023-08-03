@@ -57,7 +57,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'majutsushi/tagbar'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdcommenter'
@@ -119,24 +118,6 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 nmap <C-t> :TagbarToggle<CR>
 let g:tagbar_width = 25
 autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
-
-" Plugin YouCompleteMe
-" set completeopt=longest,menu
-" let g:ycm_min_num_of_chars_for_completion = 2
-" let g:ycm_cache_omnifunc = 0
-" let g:ycm_seed_identifiers_with_syntax = 1
-" let g:ycm_complete_in_comments = 1
-" let g:ycm_complete_in_strings = 1
-" let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-" let g:ycm_error_symbol = '>>'
-" let g:ycm_warning_symbol = '>*'
-" let g:ycm_always_populate_location_list = 1
-" let g:ycm_show_diagnostics_ui = 1
-" nmap <C-Y> :YcmDiags<CR>
-" nnoremap <Leader>gl :YcmCompleter GoToDeclaration<CR>
-" nnoremap <Leader>gf :YcmCompleter GoToDefinition<CR>
-" nnoremap <Leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Plugin ultisnips
 let g:UltiSnipsExpandTrigger = "<Leader><Tab>"

@@ -125,6 +125,9 @@ export PATH=$HOME/Softwares/mill:$PATH
 # Cargo
 . "$HOME/.cargo/env"
 
+# NeoVim
+export PATH=$HOME/Softwares/nvim-linux64/bin:$PATH
+
 # YSYX
 export YSYX_REPO=ysyx-cpu-core
 export AM_HOME=$HOME/Workspaces/$YSYX_REPO/abstract-machine
