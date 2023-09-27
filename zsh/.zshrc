@@ -102,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Alias
-alias sbsh="source ~/.bshrc"
-alias szsh="source ~/.zshrc"
+alias sz="source ~/.zshrc"
+alias ud="sudo ntpdate time.windows.com"
 
 # Dircolor
 eval `dircolors ~/.dir_colors/dircolors.256dark`
