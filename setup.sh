@@ -36,7 +36,7 @@ displayHelp() {
     echo "-b     Backup configuration files"
     echo "-v     Display Version"
     echo ""
-    echo "For more information, see https://github.com/myyerrol/linux_tool_configuration"
+    echo "For more information, see https://github.com/myyerrol/linux-tool-configs"
     echo ""
 }
 
