@@ -129,7 +129,7 @@ export PATH=$HOME/Softwares/mill:$PATH
 export PATH=$HOME/Softwares/nvim-linux64/bin:$PATH
 
 # YSYX
-export YSYX_REPO=oscc-cpu/ysyx-cpu-core
+export YSYX_REPO=oscc-cpu/riscv/ysyx-cpu-core
 export AM_HOME=$HOME/Workspaces/$YSYX_REPO/abstract-machine
 export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
