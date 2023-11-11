@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias sz="source ~/.zshrc"
 alias ud="sudo ntpdate time.windows.com"
+alias vz="vim ~/.zshrc"
 
 # Dircolor
 eval `dircolors ~/.dir_colors/dircolors.256dark`
@@ -129,9 +130,13 @@ export PATH=$HOME/Softwares/mill:$PATH
 export PATH=$HOME/Softwares/nvim-linux64/bin:$PATH
 
 # YSYX
-export YSYX_REPO=oscc-cpu/riscv/ysyx-cpu-core
+export YSYX_REPO=oscc-cpu/ysyx-cpu-core
 export AM_HOME=$HOME/Workspaces/$YSYX_REPO/abstract-machine
 export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
 export NPC_HOME=$HOME/Workspaces/$YSYX_REPO/npc
 export NVBOARD_HOME=$HOME/Workspaces/$YSYX_REPO/nvboard
+
+# TreeCore
+# export NEMU_HOME=$HOME/Workspaces/oscc-cpu/riscv/tree-core-cpu/rtl/TreeCoreL2/dependency/NEMU
+# export NOOP_HOME=$HOME/Workspaces/oscc-cpu/riscv/tree-core-cpu/rtl/TreeCoreL2/dependency
