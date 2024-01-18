@@ -31,6 +31,7 @@ backupConfigurationFiles() {
     cp -puv ~/.vimrc        ./vim
     cp -puv ~/.zshrc        ./zsh
     cp -puv ~/.bashrc       ./bash
+    cp -puv ~/.ssh/config   ./ssh
 }
 
 displayCompletedInfo() {

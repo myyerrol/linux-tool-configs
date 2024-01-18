@@ -1,0 +1,7 @@
+Host github.com
+    User git
+    HostName github.com
+    # Http proxy
+    ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport=55835
+    # Socks5 proxy
+    # ProxyCommand nc -v -x 127.0.0.1:50284 %h %p
