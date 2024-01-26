@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias sz="source ~/.zshrc"
-alias ud="sudo ntpdate time.windows.com"
+alias ud="sudo ntpdate -u time.windows.com"
 alias vz="vim ~/.zshrc"
 
 # Dircolor
@@ -136,7 +136,3 @@ export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
 export NPC_HOME=$HOME/Workspaces/$YSYX_REPO/npc
 export NVBOARD_HOME=$HOME/Workspaces/$YSYX_REPO/nvboard
-
-# TreeCore
-# export NEMU_HOME=$HOME/Workspaces/oscc-cpu/riscv/tree-core-cpu/rtl/TreeCoreL2/dependency/NEMU
-# export NOOP_HOME=$HOME/Workspaces/oscc-cpu/riscv/tree-core-cpu/rtl/TreeCoreL2/dependency
