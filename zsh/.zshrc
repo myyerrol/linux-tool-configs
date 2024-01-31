@@ -136,3 +136,8 @@ export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
 export NPC_HOME=$HOME/Workspaces/$YSYX_REPO/npc
 export NVBOARD_HOME=$HOME/Workspaces/$YSYX_REPO/nvboard
+
+# Meteor
+export METEOR_HOME=$HOME/Workspaces/oscu/meteor
+export METEOR_CPU_HOME=$METEOR_HOME/rtl
+export METEOR_ENV_HOME=$METEOR_HOME/env
