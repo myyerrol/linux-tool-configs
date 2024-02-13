@@ -21,7 +21,7 @@ Install, uninstall or backup config files that are used commonly under Linux, su
 
   ```bash
   $> cd linux_tool_configs
-  $> ./setup.sh --install
+  $> ./setup.sh --i
   ```
 
 - **Because the installation of ZSH will cause the current script to exit, you should copy the `.zshrc` file to `HOME` manually to solve this problem:**
@@ -35,7 +35,7 @@ Install, uninstall or backup config files that are used commonly under Linux, su
 - Execute the following shell scrpit:
 
   ```bash
-  $> ./setup.sh --uninstall
+  $> ./setup.sh -u
   ```
 
 ### Backup
@@ -43,7 +43,7 @@ Install, uninstall or backup config files that are used commonly under Linux, su
 - Execute the following shell scrpit:
 
   ```bash
-  $> ./setup.sh --backup
+  $> ./setup.sh -b
   ```
 
 ## Configuration
