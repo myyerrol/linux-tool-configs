@@ -104,9 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias sz="source ~/.zshrc"
 alias ud="sudo ntpdate -u time.windows.com"
-alias vz="vim ~/.zshrc"
 alias tl="tmux ls"
 alias ta="tmux attach-session -t0"
+alias vz="vim ~/.zshrc"
+alias vt="vim ~/.tmux.conf"
 
 # Dircolor
 eval `dircolors ~/.dir_colors/dircolors.256dark`
