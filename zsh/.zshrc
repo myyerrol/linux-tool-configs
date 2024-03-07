@@ -142,9 +142,10 @@ export NPC_HOME=$HOME/Workspaces/$YSYX_REPO/npc
 
 # Meteor
 export METEOR_HOME=$HOME/Workspaces/oscu/meteor
-export METEOR_CPU_HOME=$METEOR_HOME/rtl
+export METEOR_CPU_HOME=$METEOR_HOME/cpu
 export METEOR_ENV_HOME=$METEOR_HOME/env
+export METEOR_IP_HOME=$METEOR_HOME/ip
 
-# CVA6
-export RISCV=$HOME/Softwares/cva6
-export INSTALL_DIR=$RISCV
+# RISC-V Tools
+export RISCV=$HOME/Softwares/riscv-tools
+export PATH=$RISCV/riscv64-linux-gnu/bin:$PATH
