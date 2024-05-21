@@ -213,10 +213,11 @@ installConfigsToServer() {
 
 backupConfigs() {
     setDisplayColor
-    cp -puv ~/.tmux.conf ./tmux
-    cp -puv ~/.gitconfig ./git
-    cp -puv ~/.vimrc     ./vim
-    cp -puv ~/.zshrc     ./zsh
+    cp -puv ~/.tmux.conf           ./tmux
+    cp -puv ~/.gitconfig           ./git
+    cp -puv ~/.vimrc               ./vim
+    cp -puv ~/.zshrc               ./zsh
+    cp -puv ~/.config/nix/nix.conf ./nix
     echo "${GREEN}Everything is ok! All Configs have been backup!${NORMAL}"
 }
 
