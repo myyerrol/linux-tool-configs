@@ -129,11 +129,19 @@ export PATH=$HOME/Softwares/mill:$PATH
 # Cargo
 . "$HOME/.cargo/env"
 
+# Nix
+if [ -e /home/myyerrol/.nix-profile/etc/profile.d/nix.sh ]; then
+    . /home/myyerrol/.nix-profile/etc/profile.d/nix.sh;
+fi
+
 # NeoVim
 export PATH=$HOME/Softwares/nvim-linux64/bin:$PATH
 
+# RISC-V
+export PATH=/opt/riscv/bin:$PATH
+
 # YSYX
-export YSYX_REPO=oscc-cpu/ysyx-workbench
+export YSYX_REPO=oscu-cpu/ysyx-workbench
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
 export AM_HOME=$HOME/Workspaces/$YSYX_REPO/abstract-machine
 export NAVY_HOME=$HOME/Workspaces/$YSYX_REPO/navy-apps
@@ -141,11 +149,7 @@ export NVBOARD_HOME=$HOME/Workspaces/$YSYX_REPO/nvboard
 export NPC_HOME=$HOME/Workspaces/$YSYX_REPO/npc
 
 # Meteor
-export METEOR_HOME=$HOME/Workspaces/oscu/meteor
+export METEOR_HOME=$HOME/Workspaces/oscu-cpu/meteor
 export METEOR_CPU_HOME=$METEOR_HOME/cpu
 export METEOR_ENV_HOME=$METEOR_HOME/env
 export METEOR_IP_HOME=$METEOR_HOME/ip
-
-# RISC-V Tools
-export RISCV=$HOME/Softwares/riscv-tools
-export PATH=$RISCV/riscv64-linux-gnu/bin:$PATH
