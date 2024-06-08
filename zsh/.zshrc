@@ -140,6 +140,11 @@ export PATH=$HOME/Softwares/nvim-linux64/bin:$PATH
 # RISC-V
 export PATH=/opt/riscv/bin:$PATH
 
+# SystemC
+export SYSTEMC_HOME=/usr/local/systemc-2.3.3
+export SYSTEMC_INCLUDE=$SYSTEMC_HOME/include
+export SYSTEMC_LIBDIR=$SYSTEMC_HOME/lib-linux64
+
 # YSYX
 export YSYX_REPO=oscu-cpu/ysyx-workbench
 export NEMU_HOME=$HOME/Workspaces/$YSYX_REPO/nemu
